@@ -17,7 +17,7 @@ body {
 .hero {
   min-height: 96vh;
   background: linear-gradient(90deg, rgba(2,4,8,.85) 35%, rgba(2,4,8,.35)),
-              url('assets/home-hero.svg') center/cover;
+              url('assets/home-hero.svg?v=20260513') center/cover;
   position: relative;
 }
 .nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; }
