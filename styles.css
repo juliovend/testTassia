@@ -1,0 +1,71 @@
+:root {
+  --bg: #06080d;
+  --panel: #0b0d12;
+  --txt: #e6e6eb;
+  --muted: #b8bcc6;
+  --accent: #b25142;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: radial-gradient(circle at top, #111827, #05070c 45%);
+  color: var(--txt);
+}
+.container { width: min(1220px, 92%); margin: 0 auto; }
+.hero {
+  min-height: 96vh;
+  background: linear-gradient(90deg, rgba(2,4,8,.85) 35%, rgba(2,4,8,.35)),
+              url('https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1800&q=80') center/cover;
+  position: relative;
+}
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; }
+.logo { font-size: 2rem; line-height: 0.95; font-weight: 300; letter-spacing: 1px; }
+.logo span { color: var(--accent); font-size: 1.4rem; margin-left: .25rem; }
+.nav ul { list-style: none; display: flex; gap: 2rem; font-size: .82rem; color: #cfd2da; }
+.active { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: .5rem; }
+.hero-content { padding: 5rem 0 9rem; }
+.left { max-width: 500px; }
+h1 { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 400; line-height: 1; margin: 0 0 1rem; }
+h1 span, h2 span { color: var(--accent); }
+p { color: var(--muted); line-height: 1.7; }
+button {
+  margin-top: 1.5rem; background: transparent; color: var(--accent); border: 1px solid var(--accent);
+  padding: 1rem 1.75rem; text-transform: uppercase; letter-spacing: .12em;
+}
+.section { padding: 5rem 0; border-top: 1px solid rgba(255,255,255,.04); }
+.two-col { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem; align-items: center; }
+.image { min-height: 420px; background-size: cover; background-position: center; }
+.ph1 { background-image: url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1300&q=80'); }
+h5 { color: var(--accent); letter-spacing: .15em; font-weight: 500; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 3.6rem; line-height: 1.05; font-weight: 400; margin: .3rem 0 1rem; }
+a { color: var(--accent); text-decoration: none; letter-spacing: .12em; font-size: .85rem; }
+.section-head { text-align: center; margin-bottom: 2rem; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.card { background: #0a0d13; border: 1px solid rgba(255,255,255,.12); }
+.thumb { height: 210px; background-size: cover; background-position: center; }
+.t1 { background-image: url('https://images.unsplash.com/photo-1507924538820-ede94a04019d?auto=format&fit=crop&w=900&q=80'); }
+.t2 { background-image: url('https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=900&q=80'); }
+.t3 { background-image: url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80'); }
+.t4 { background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80'); }
+.card h3, .card p { padding: 0 1rem; }
+.ateliers { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+.atelier-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.atelier-grid > div { border-left: 1px solid rgba(255,255,255,.16); padding: 0 1rem; }
+.values { background: rgba(0,0,0,.25); padding: 2rem 0; }
+.value-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center; }
+.contact { display: grid; grid-template-columns: 1fr 1.3fr; gap: 2rem; }
+form { display: grid; gap: .8rem; }
+input, textarea {
+  background: transparent; border: 1px solid rgba(255,255,255,.2); color: #fff; padding: .9rem 1rem;
+}
+textarea { min-height: 130px; }
+footer { border-top: 1px solid rgba(255,255,255,.1); padding: 1.5rem 0; }
+.foot { display: flex; justify-content: space-between; align-items: center; }
+@media (max-width: 980px) {
+  .nav ul { display: none; }
+  h1 { font-size: 3.8rem; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .atelier-grid { grid-template-columns: repeat(2, 1fr); }
+  .two-col, .ateliers, .contact, .value-grid { grid-template-columns: 1fr; }
+}
